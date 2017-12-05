@@ -1,6 +1,6 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 2rem;
+  padding-top: 0rem !important;
   /*background-color: #d0cecf;*/
   background-color: #292b2c;
 }
@@ -132,4 +132,13 @@ iframe {
 
 .featurette-pic {
   margin-top: 1rem;
+}
+
+#container-navbar {
+  width: 100%;
+}
+
+#navbar-spotify {
+  position: absolute;
+  right: 0px;
 }
