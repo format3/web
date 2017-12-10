@@ -1,0 +1,136 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 0rem !important;
+  /*background-color: #d0cecf;*/
+  background-color: #292b2c;
+}
+
+iframe {
+
+}
+#containerGreyText {
+  margin-top: 5rem;
+}
+
+#containerGreyText h2, #containerGreyText p {
+  color: #d0cecf;
+}
+
+.relative {
+  position: relative;
+}
+
+#bannerFormat {
+  width: 100%;
+  height: -webkit-fill-available;
+  min-height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: .25;
+}
+
+#topSection {
+  overflow: hidden;
+}
+
+#navbar-logo {
+  height: 100%;
+  width: 150px;
+}
+
+#logoFormat {
+  width: 100%;
+}
+
+#div-about {
+  padding: 0px 0px 0px 0px !important;
+  width: 90%;
+}
+
+.ig-b- {
+  display: inline-block;
+}
+
+.ig-b- img {
+  visibility: hidden;
+}
+
+.ig-b-:hover {
+  background-position: 0 -60px;
+}
+
+.ig-b-:active {
+  background-position: 0 -120px;
+}
+
+.ig-b-v-24 {
+  width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .ig-b-v-24 {
+    background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px;
+  }
+}
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+.topContainer {
+  width: 45%;
+}
+
+#formatContainer {
+  margin-left: 5%;
+}
+
+#spotifyContainer {
+  margin-right: 5%;
+}
+
+.div-social {
+  width: 100%;
+}
+
+.social {
+  width: 80%;
+  height: auto;
+  margin: 0 auto !important;
+  padding: 10px;
+  position: relative;
+}
+
+.follow {
+  width: 100%;
+}
+
+.follow-center {
+  margin: 0 auto;
+  display: block !important;
+}
+
+.img-social {
+  width: 110px;
+  height: 110px;
+}
+
+.alignCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featurette-pic {
+  margin-top: 1rem;
+}
+
+#container-navbar {
+  width: 100%;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% block title %}Desktop Command Remote{% endblock %}</title>
+
+  <script type="text/javascript" src="static/lib/head.min.js"></script>
+
+  <script type="text/javascript">
+  head.load(
+      "static/css/carousel.css",
+      "static/css/jumbotron.css",
+    "static/lib/font-awesome-bower/css/font-awesome.css",
+    "static/lib/libs.min.css",
+    "static/css/main.css"
+    );
+  var music_dir = "{{music_dir|addslashes}}";
+  var music_dir_set = "{{music_dir_set}}" === "true";
+  </script>
+  {% block head %}
+  {% endblock %}
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10';
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  {% if menu %}
+  <nav id="nav-1" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#playlist/LIBRARY">Stretto</a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        {% if !demo %}
+        <li class='dropdown'>
+          <a class='pointer dropdown-toggle' data-toggle='dropdown'>Scan Library <span class="caret"></span></a>
+          <ul class='dropdown-menu' role='menu'>
+            <li><a class='pointer' id='soft_scan'>Regular Scan</a></li>
+            <li><a class='pointer' id='hard_scan'>Hard Rescan</a></li>
+          </ul>
+        </li>
+        {% endif %}
+        <li {% if demo %}class="disabled"{% endif %}>
+          <a class='pointer' id='load_sync_view'>
+            Sync Libraries {% if demo %}(disabled in demo){% endif %}
+          </a>
+        </li>
+        <li>
+          <a class='pointer' id='export_data'>
+            Export to Stretto Next
+          </a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        {% block extra_nav %}{% endblock %}
+      </ul>
+    </div>
+  </nav>
+
+  <nav id="nav-2" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div id="nav-center">
+      <h3 id="header-banner-info" class="header-new-academy">"Stars" coming to Spotify and iTunes 12.27.17!!!</h3>
+    </div>
+  </nav>
+  {% endif %}
+  {% block content %}
+  {% endblock %}
+  <script type="text/javascript">
+    head.js(
+      "static/lib/libs.min.js",
+      "socket.io/socket.io.js",
+      "static/js/player/utils.js",
+      "static/js/player/models.js",
+      "static/js/player/player.js",
+      "static/js/player/socket.js",
+      "static/js/player/backbone_setup.js",
+      "static/js/player/settingsview.js",
+      "static/js/player/songview.js",
+      "static/js/player/selection_options.js",
+      "static/js/player/exporter.js",
+      "static/js/player/onload.js",
+      "static/js/player/detailview.js",
+      "static/js/player/sidebarview.js",
+      "static/js/player/infoview.js",
+      "static/js/player/syncview.js",
+      "static/js/player/footer.js",
+      "static/js/player/coverbox.js",
+      "https://www.youtube.com/iframe_api"
+      );
+  </script>
+  {% block scripts %}
+  {% endblock %}
+</body>
+</html>
