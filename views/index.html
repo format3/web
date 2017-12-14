@@ -19,7 +19,7 @@
   </ul>
 </li>
 {% if !demo %}
-  <li><a id='open_settings' class='pointer'><i class="fa fa-cog"></i> Settings</a></li>
+<li><a id='open_settings' class='pointer'><i class="fa fa-cog"></i> Settings</a></li>
 {% endif %}
 {% endblock %}
 
@@ -34,7 +34,7 @@
         <div id="container-about-left" class="container-about-shared">
           <h1 class="display-3 header-new-academy">Format</h1>
           <div class="col-lg-4" id="div-about">
-            <p id="p-about">Rapper, songwriter and producer for Bentley Records. Performing in New York, Atlanta, and more! Music available on all streaming services including iTunes and Spotify.</p>
+            <p id="p-about"> DOES THIS FUCKING WOKR???? Rapper, songwriter and producer for Bentley Records. Performing in New York, Atlanta, and more! Music available on all streaming services including iTunes and Spotify.</p>
           </div>
           <div id="div-spotify">
             <iframe class="featurette-pic" id="iframe-spotify" src="https://open.spotify.com/embed?uri=spotify:track:2kHiU2cC35DLFucFmXdOFa" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
@@ -46,21 +46,22 @@
           <div class="nav-follow-center-vert">
             <iframe id="iframe-spotify-follow" src="https://open.spotify.com/follow/1/?uri=spotify:artist:4Ws7qjyfSsrt8rSNenjQqy&size=basic&theme=dark" width="140" height="36" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
           </div>
-        </div>
-        <div class="nav-follow">
-          <div class="nav-follow-center-vert">
-            <a href="https://www.instagram.com/format/" target="_blank" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+
+          <div class="nav-follow">
+            <div class="nav-follow-center-vert">
+              <a href="https://www.instagram.com/format/" target="_blank" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+            </div>
           </div>
-        </div>
-        <div class="nav-follow">
-          <div class="nav-follow-center-vert">
-            <div class="fb-follow" data-href="https://www.facebook.com/formattic" data-width="100" data-height="25" data-layout="button_count" data-size="large" data-show-faces="true"></div>
+          <div class="nav-follow">
+            <div class="nav-follow-center-vert">
+              <div class="fb-follow" data-href="https://www.facebook.com/formattic" data-width="100" data-height="25" data-layout="button_count" data-size="large" data-show-faces="true"></div>
+            </div>
           </div>
-        </div>
-        <div class="nav-follow">
-          <div class="nav-follow-center-vert">
-            <a href="https://twitter.com/formattic?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @formattic</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <div class="nav-follow">
+            <div class="nav-follow-center-vert">
+              <a href="https://twitter.com/formattic?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @formattic</a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
           </div>
         </div>
       </div>
@@ -70,23 +71,24 @@
   </div>
   <div id='content' class="main-style">
   </div>
-  <div id='bottom_bar' class='disable_selection' tabindex="1">
-    <div class='current_time'></div>
-    <div class='duration'></div>
-    <input type="text" id="scrub_bar" data-slider-value="0" data-slider-id="scrub_bar_slider" value="" data-slider-max="100" data-slider-step="0.1" data-slider-tooltip="hide" />
-    <div id="current_info">&nbsp;</div>
-    <div class="controls">
-      <i id="repeat" class="fa fa-retweet fa-3x blue"></i>
-      <span id="repeat_badge" class="badge hidden">1</span>
-      <i id="prev" class="fa fa-fast-backward fa-3x"></i>
-      <i id="playpause" class="fa fa-play fa-3x"></i>
-      <i id="next" class="fa fa-fast-forward fa-3x"></i>
-      <i id="shuffle" class="fa fa-random fa-3x"></i>
-    </div>
-    <div id="settings_bar">
-    </div>
+</div>
+<div id='bottom_bar' class='disable_selection' tabindex="1">
+  <div class='current_time'></div>
+  <div class='duration'></div>
+  <input type="text" id="scrub_bar" data-slider-value="0" data-slider-id="scrub_bar_slider" value="" data-slider-max="100" data-slider-step="0.1" data-slider-tooltip="hide" />
+  <div id="current_info">&nbsp;</div>
+  <div class="controls">
+    <i id="repeat" class="fa fa-retweet fa-3x blue"></i>
+    <span id="repeat_badge" class="badge hidden">1</span>
+    <i id="prev" class="fa fa-fast-backward fa-3x"></i>
+    <i id="playpause" class="fa fa-play fa-3x"></i>
+    <i id="next" class="fa fa-fast-forward fa-3x"></i>
+    <i id="shuffle" class="fa fa-random fa-3x"></i>
+  </div>
+  <div id="settings_bar">
   </div>
 </div>
+
 <audio id='current_track'><source id="current_src" type='audio/mpeg'></audio>
 <div class="options_container"></div>
 <div class='hidden'>
@@ -353,9 +355,9 @@
 </script>
 {% endraw %}
 <script type="text/javascript">
-var this_ip = "{{ip}}";
-var country_code = "{{country_code}}";
-var on_mobile = false;
+    var this_ip = "{{ip}}";
+    var country_code = "{{country_code}}";
+    var on_mobile = false;
 </script>
 {% endblock %}
 {% block scripts %}
