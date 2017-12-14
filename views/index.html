@@ -25,51 +25,74 @@
 
 {% block content %}
 <div id="wrapper" class="custom_scrollbar" tabindex="0">
+  <div id='content' class="main-style">
+  </div>
   <div id='sidebar-new' class="main-style">
     <div class="jumbotron relative" id="sidebar-info">
       <!--<img id="bannerFormat" src="static/images/Spotify-Header.png">-->
       <div class="container" id="container-about">
-
-
         <div id="container-about-left" class="container-about-shared">
-          <h1 class="display-3 header-new-academy">Format</h1>
-          <div class="col-lg-4" id="div-about">
-            <p id="p-about"> DOES THIS FUCKING WOKR???? Rapper, songwriter and producer for Bentley Records. Performing in New York, Atlanta, and more! Music available on all streaming services including iTunes and Spotify.</p>
-          </div>
-          <div id="div-spotify">
-            <iframe class="featurette-pic" id="iframe-spotify" src="https://open.spotify.com/embed?uri=spotify:track:2kHiU2cC35DLFucFmXdOFa" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
-          </div>
-        </div>
-
-
-        <div id="container-about-right" class="container-about-shared">
-          <div class="nav-follow-center-vert">
-            <iframe id="iframe-spotify-follow" src="https://open.spotify.com/follow/1/?uri=spotify:artist:4Ws7qjyfSsrt8rSNenjQqy&size=basic&theme=dark" width="140" height="36" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
-          </div>
-
-          <div class="nav-follow">
-            <div class="nav-follow-center-vert">
-              <a href="https://www.instagram.com/format/" target="_blank" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+          <!--Top Start-->
+          <div id="div-top">
+            <!--Format Start-->
+            <div id="div-format">
+              <div id="div-format-middle">
+                <h1 class="display-3 header-new-academy header-format">Format</h1>
+              </div>
+              <!--
+              <div class="col-lg-4" id="div-about">
+                <p id="p-about">Rapper, songwriter and producer for Bentley Records. Performing in New York, Atlanta, and more! Music available on all streaming services including iTunes and Spotify.</p>
+              </div>
+              -->
             </div>
+            <!--Format End-->
+
           </div>
-          <div class="nav-follow">
-            <div class="nav-follow-center-vert">
-              <div class="fb-follow" data-href="https://www.facebook.com/formattic" data-width="100" data-height="25" data-layout="button_count" data-size="large" data-show-faces="true"></div>
+          <!--Top End-->
+          <div id="div-middle">
+            <!--Video Start-->
+            <!--
+            <iframe class="iframe-player" src="https://open.spotify.com/embed?uri=spotify:track:2kHiU2cC35DLFucFmXdOFa" width="290" height="290" frameborder="0" allowtransparency="true"></iframe>
+            -->
+            <div id="div-middle-middle">
+              <iframe width='648' height='365' src="https://www.youtube.com/embed/pf-1LYFETyM"frameborder="0"></iframe>
             </div>
+            <!--Video End-->
           </div>
-          <div class="nav-follow">
-            <div class="nav-follow-center-vert">
-              <a href="https://twitter.com/formattic?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @formattic</a>
-              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <!--Bottom Start-->
+          <div id="div-bottom">
+            <!--Social Media Start-->
+            <div id="div-social">
+
+              <div class="nav-follow">
+                <iframe id="iframe-spotify-follow" src="https://open.spotify.com/follow/1/?uri=spotify:artist:4Ws7qjyfSsrt8rSNenjQqy&size=basic&theme=dark" width="140" height="36" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+              </div>
+
+              <div class="nav-follow">
+                <a href="https://www.instagram.com/format/" target="_blank" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+              </div>
+
+              <div class="nav-follow">
+                <a href="https://twitter.com/formattic?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @formattic</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
+
+              <div class="nav-follow">
+                <div class="fb-follow" data-href="https://www.facebook.com/formattic" data-width="100" data-height="25" data-layout="button_count" data-size="large" data-show-faces="true"></div>
+              </div>
+
             </div>
+            <!--Social Media End-->
           </div>
+          <!--Bottom End-->
         </div>
       </div>
     </div>
   </div>
   <div id='sidebar'>
   </div>
-  <div id='content' class="main-style">
+  <div id="content-twitter" class="main-style">
+    <a class="twitter-timeline" data-height="550" data-theme="dark" href="https://twitter.com/formattic?ref_src=twsrc%5Etfw">Tweets by formattic</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 </div>
 <div id='bottom_bar' class='disable_selection' tabindex="1">
@@ -122,7 +145,7 @@
 </script>
 <script type='text/swig' id='song_template'>
   <div class='playlist_meta'>
-    <h1><!--<span id='playlist_header'>{{title}}</span>--><span id='playlist_header' class="header-new-academy">Tracks</span>
+    <h1 class="header-format"><!--<span id='playlist_header'>{{title}}</span>--><span id='playlist_header' class="header-new-academy">Tracks</span>
     {% if editable %}
       <div class="btn-group">
         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
@@ -134,7 +157,7 @@
           <li><a class='delete_playlist'>Delete Playlist</a></li>
         </ul>
       </div>
-    {% endif %}</h1><p>{{numSongs}} Songs - {{totalDuration}}</p>
+    {% endif %}</h1><p class="header-format">{{numSongs}} Songs - {{totalDuration}}</p>
   </div>
   <table class='table song_table disable_selection'>
     <thead>

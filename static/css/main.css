@@ -26,17 +26,17 @@ body{
 #content{
   height: 90%;
   height: calc(100% - 93px);
-  margin-top: 50px;
-  margin-left: 75%;
-  padding: 20px;
-  padding-bottom: 0px;
+  margin-top: 57px;
+  margin-right: 75%;
+  padding: 20px 20px 0px 20px;
   background-image: url(../images/Hold On.png);
   -webkit-background-size: 100%;
   background-size: 100%;
   color: #F6F6F6;
-  -webkit-box-shadow: -8px -6px 5px -4px rgba(176,174,176,1);
+  position: fixed;
+  /*-webkit-box-shadow: -8px -6px 5px -4px rgba(176,174,176,1);
   -moz-box-shadow: -8px -6px 5px -4px rgba(176,174,176,1);
-  box-shadow: -8px -6px 5px -4px rgba(176,174,176,1);
+  box-shadow: -8px -6px 5px -4px rgba(176,174,176,1);*/
 }
 #content > div{
   height: 100%;
@@ -51,13 +51,14 @@ body{
 
 }
 #sidebar-new{
-  margin-top: 50px;
-  padding-bottom: 60px;
-  width: 75%;
+  margin-top: 57px;
+  padding: 0px 0px 60px 0px;
+  width: 50%;
   height: 100%;
   position: fixed;
   left: 0;
-  /*box-shadow: 0 0 20px #ccc;*/
+  /* box-shadow: 0 0 20px #ccc; */
+  margin-left: 25%;
 }
 #sidebar{
   margin-top: 50px;
@@ -408,27 +409,25 @@ tr:hover .options{
 
 #sidebar-info {
   height: 100%;
-  padding-top: 5px;
+  padding-top: 0px !important;
   background-image: url("../images/No Entry.png");
   -webkit-background-size: 100%;
   background-size: 100%;
+
+  /*
   border-right: 1px solid #000000;
+  border-left: 1px solid #000000;
+  */
 }
 
 #container-about {
-  padding-left: 50px;
   background-color: #1c1c1c;
   background-color: #292b2c;
 }
 
-#div-spotify {
-  width: 100%;
-  height: 100%;
-}
-
-#iframe-spotify {
+.iframe-player {
   display: block;
-  margin: 20px;
+  float: left;
 }
 
 #nav-1 {
@@ -438,7 +437,8 @@ tr:hover .options{
 #nav-2 {
   background-color: #292b2c;
   background-image: none;
-  border-bottom: 1px solid #1b1b1b;
+  box-shadow: -5px 5px 20px 5px #000;
+  border: none !important;
 }
 
 #nav-center {
@@ -449,10 +449,11 @@ tr:hover .options{
 }
 
 .nav-follow {
- /* float: left;
-  width: 25%;
-  height: 100%;*/
-  margin-bottom: 24px;
+  float: left;
+  margin: 5px;
+  /*width: 25%;
+  height: 100%;
+  margin-bottom: 24px;*/
 }
 
 .nav-follow-center-vert {
@@ -464,7 +465,6 @@ tr:hover .options{
 
 #p-about {
   font-size: 16px;
-  margin-bottom: 40px;
 }
 
 .main-style, .header-new-academy {
@@ -474,12 +474,11 @@ tr:hover .options{
 }
 
 #container-about-left {
-  width: 65%;
+  width: 100%;
 }
 
 #container-about-right {
-  width: 35%;
-  padding-top: 100px;
+  width: 25%;
   padding-top: 200px;
 }
 #container{
@@ -494,4 +493,65 @@ tr:hover .options{
 
 #header-banner-info {
   color: #e9e581;
+}
+
+#div-top {
+  height: 70px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#div-format, #div-social {
+  float: left;
+}
+
+#div-format {
+  width: 100%;
+}
+
+#div-social {
+  width: 100%;
+}
+
+#div-middle {
+  height: 365px;
+  margin-top: 15px;
+}
+
+#div-bottom {
+  width: 100%;
+  height: 100%;
+  margin-top: 25px;
+}
+
+#content-twitter {
+  margin-top: 57px;
+  padding: 0px 0px 60px 20px;
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  margin-left: 75%;
+}
+
+.header-format {
+  margin: 0px 0px 0px 0px !important;
+  text-align: center;
+}
+
+#iframe-youtube {
+
+}
+
+#div-middle-middle {
+  margin: 0 auto;
+  width: 648px;
+  height: 365px;
+  box-shadow: -5px 5px 20px 5px #000;
+}
+
+#div-format-middle {
+  margin: 0 auto;
+  width: 50%;
+  height: 70px;
 }
