@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Format</title>
+
+    <script type="text/javascript" src="static/lib/head.min.js"></script>
+
+    <script type="text/javascript">
+        head.load(
+            "static/lib/font-awesome-bower/css/font-awesome.css",
+            "static/css/simple-line-icons.css",
+            "static/css/gennaMain.css"
+        );
+
+    </script>
+</head>
+<body>
+<div class = "feature"></div>
+<div class = "content">
+    <div id="">
+        <div id="centerContainer">
+            <h1>FORMAT</h1>
+            <div id="mainContent">
+
+                    <div id="youTubeContainer">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/tVQAgu364RA?start=262"
+                                frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div id="socialMediaButtons">
+                        <div class="socialContainers">
+                            <i class="icon-social-spotify icon"></i>
+                        </div>
+                        <div class="socialContainers">
+                            <a href="https://www.instagram.com/format/">
+                                <i class="icon-social-instagram icon"></i>
+                            </a>
+                        </div>
+                        <div class="socialContainers">
+                            <a href="https://twitter.com/formattic?lang=en">
+                                <i class="icon-social-twitter icon"></i>
+                            </a>
+                        </div>
+                        <div class="socialContainers">
+                            <i class="icon-social-facebook icon"></i>
+                        </div>
+                    </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+    <footer>
+
+    </footer>
+
+</div>
+</div>
+</body>
+</html>
+
+<script>
+$(function(){
+    zoom = $('.feature').css('background-size')
+    zoom = parseFloat(zoom)/100
+    size = zoom * $('.feature').width();
+
+$(window).on('scroll', function(){
+    fromTop = $(window).scrollTop();
+    newSize = size - (fromTop/3);
+
+    if (newSize > $('.feature').width()) {
+
+        $('.feature').css({
+            '-webkit-background-size': newSize,
+            '-moz-background-size': newSize,
+            '-o-background-size': newSize,
+            'background-size': newSize,
+            '-webkit-filter':'blur('+ 0 + (fromTop/100) + 'px)',
+            'opacity': 1 - ((fromTop / $('html').height()) * 1.3)
+        });
+    }
+    });
+});
+
+$(function (){
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+
+    if (isChrome || isSafari) {
+
+    } else {
+        $('.feature').append('<div class="opaque"></div>');
+
+        $(window).on('scroll', function(){
+            var opacity = 0 + ($(window).scrollTop()/5000);
+
+            $('.opaque').css('opacity', opacity);
+        });
+    }
+});
+
+</script>
+
+<!--  <div class="lt-ie9"> - this goes in if
+
+<! - -[if IE 8]>
+          <![endif] - ->
+<div class="feature"></div>
+<div class="content">
+</div>
+<!--[if IE 8]>         </div> <![endif]-- >
+
+-->

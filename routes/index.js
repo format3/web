@@ -30,6 +30,7 @@ exports.createRoutes = function(app_ref) {
   app.get('/songs/:id', sendSong);
   app.get('/cover/:id', sendCover);
   app.get('/downloadplaylist/:id', downloadPlaylist);
+  app.get('/genna', gennaRoute);
 
   // remote control commands
   app.get('/command/:name/:command', remoteCommand);
@@ -96,6 +97,37 @@ exports.createRoutes = function(app_ref) {
   app.io.route('similar_songs', getSimilarSongs);
   app.io.route('youtube_search', getYoutubeSongs);
 };
+
+function gennaRoute(req, res) {
+    // test if client is mobile
+    md = new MobileDetect(req.headers['user-agent']);
+
+    // get ip (for syncing functions)
+    util.getip(function(ip) {
+        // the function to send the homepage only when the config is finished initalizing
+        var sendHome = function() {
+            var config = app.get('config');
+            // render the view
+            res.render((md.mobile() ? 'mobile' : 'genna'), {
+                menu: !md.mobile(),
+                music_dir: config.music_dir,
+                music_dir_set: config.music_dir_set,
+                country_code: config.country_code,
+                ip: ip + ':' + app.get('port'),
+                remote_name: req.params.name,
+                demo: config.demo,
+            });
+        };
+
+        // logic to wait for config to initialise
+        var config = app.get('config');
+        if (config.initialized) {
+            sendHome();
+        } else {
+            config.initializedFn = sendHome;
+        }
+    });
+}
 
 function playerRoute(req, res) {
   // test if client is mobile
