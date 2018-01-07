@@ -8,7 +8,14 @@ $( document ).ready(function() {
                 opac = 0.8;
             }
             //console.log("Opacity: " + opac);
-            document.body.style.background = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(examples/jumbotron/format-logo.png) no-repeat";
+            //console.log("Y-Offset: " + window.pageYOffset);
+
+            $("#bg").css({"background":"linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(examples/jumbotron/format-logo.png)"});
+            $("#bg").css({"height":"200%"});
+            $("#bg").css({"background-position":"center"});
+            $("#bg").css({"background-repeat":"no-repeat"});
+            $("#bg").css({"background-size":"cover"});
+            $("#bg").css({"background-attachment":"fixed"});
         }
     }
 });

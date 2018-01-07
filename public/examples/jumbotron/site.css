@@ -1,46 +1,71 @@
-@font-face {
-    font-family: 'Calluna';
-    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/CallunaSansRegular.otf') format('opentype');
-}
-* {
-    box-sizing: border-box;
-}
-body {
-    font-family: Calluna, Arial, sans-serif;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(format-logo.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed !important;
-    background-size: 100% !important;
-    background-position: center top !important;
-    padding: 1rem;
-    padding-top: 45%;
-    color: #fff;
+body, html {
+    height: 100%;
+    margin: auto;
 }
 
-h1 {
-    font-size: 4rem;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    line-height: 1;
-    position: absolute;
-    top: 10px;
-    font-weight: 100;
+#bg {
+    /* The image used */
+    background-image: url("format-logo.png");
+
+    /* Full height */
+    height: 200%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
-p {
-    font-size: 1.3rem;
-    text-align: left;
-    line-height: 1.6;
-    margin-left: 8rem;
-    margin-right: 8rem;
-    color: #000;
+
+* {box-sizing:border-box}
+body, html {padding:0; margin:0}
+body {background:#232323; color:#fff}
+.opaque {position:absolute; top:0; left:0; right:0; bottom:0; opacity:0; background:#d2d6f1;}
+.lt-ie9 .opaque {display:none;}
+.feature {position:fixed; top:0; z-index:0; width:100%; padding-top:50%; background: url(http://s3.nikecdn.com/pass/NikeBasketball/LeBron_Poster.jpg) center center no-repeat;
+    -webkit-background-size:250%;
+    -moz-background-size:250%;
+    -o-background-size:250%;
+    background-size:250%;
+    -webkit-box-shadow: 0 -50px 20px -20px #232323 inset;
+    -moz-box-shadow: 0 -50px 20px -20px #232323 inset;
+    box-shadow: 0 -50px 20px -20px #232323 inset;
 }
-h2 {
+
+#content {
+    position:relative;
+    z-index:1;
+    width:50%;
+    margin:0 auto;
+    background-color: transparent;
+    height: 100%;
+}
+
+@media only screen and (min-width:36.250em) {
+    #content {
+        /*width:60%;*/
+    }
+}
+
+#bottom {
+    margin-top: -40px;
+    margin-bottom: 40px;
     text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 0;
 }
-span {
-    display: block;
-    margin: 0;
-    text-align: center;
-    font-size: 3rem;
+
+#scroll {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#top {
+    height: 50%;
+    width: 100%;
+}
+
+#info {
+    color: #000000;
+    font-size: 33px;
+    font-family: Open Sans;
 }
