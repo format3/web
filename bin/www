@@ -4,8 +4,8 @@
  * Ports
  * @type {number}
  */
-var portHttp = 80;
-var portHttps = 443;
+var portHttp = 8080;
+var portHttps = 8443;
 
 /**
  * Module dependencies.
