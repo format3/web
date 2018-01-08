@@ -109,4 +109,5 @@ function phone() {
     $('#info').css({"color": "#d0cecf"});
     $('#info').css({"padding-bottom": "18px"});
     $('#info').css({"margin-bottom": "0px"});
+    $('#format').css({"position": "absolute"});
 }

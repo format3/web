@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "NEW ACADEMY";
+    src: url(NEWACADEMY.ttf);
+}
+
 body, html {
     height: 200%;
     margin: auto;
@@ -23,8 +28,6 @@ body, html {
     background-size: cover !important;
     background-attachment: fixed !important;
 }
-
-
 
 #content {
     position:relative;
@@ -64,4 +67,18 @@ body, html {
 
 #directionality {
     color: #d0cecf;
+}
+
+#format {
+    font-family: "NEW ACADEMY";
+    font-size: 75px;
+    color: #d0cecf;
+    text-align: center;
+    left: 0;
+    line-height: 200px;
+    margin: auto;
+    margin-top: -100px;
+    position: fixed;
+    top: 50%;
+    width: 100%;
 }
