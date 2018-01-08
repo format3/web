@@ -30,13 +30,11 @@ body, html {
 }
 
 #content {
-    position:relative;
+    position:absolute;
     z-index:1;
-    width:50%;
+    width:100%;
     margin:0 auto;
     background-color: transparent;
-    height: 50%;
-    margin-top: -30px;
     text-align: center;
 }
 
@@ -63,6 +61,8 @@ body, html {
     font-family: Open Sans;
     margin-top: 30px;
     font-size: 14px;
+    width: 100%;
+    width: 300px;
 }
 
 #directionality {
@@ -80,5 +80,10 @@ body, html {
     margin-top: -100px;
     position: fixed;
     top: 50%;
+    width: 100%;
+}
+
+#raised {
+    height: 20px;
     width: 100%;
 }

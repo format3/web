@@ -24,10 +24,6 @@ $(document).ready(function() {
         }
     });
 
-
-
-
-
     window.onscroll = function() {
 
         //On Window Scroll
@@ -39,15 +35,19 @@ $(document).ready(function() {
                 var opac = (window.pageYOffset / info);
 
                 //Don't fully white out screen
-                if (opac > 0.8) {
-                    opac = 0.8;
+                if (opac > 0.9) {
+                    opac = 0.9;
                 }
 
+                //Fade background
                 $("body").css({"background": "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(examples/jumbotron/format-logo.png)"});
                 $("body").css({"background-position": "center"});
                 $("body").css({"background-repeat": "no-repeat"});
                 $("body").css({"background-size": "cover"});
                 $("body").css({"background-attachment": "fixed"});
+
+                //Fade direction
+                $("#directionality").css({"opacity":"" + (1-opac) + ""});
             }
         }
     }
@@ -79,15 +79,23 @@ function computer() {
     $('#bottom').css({"position": "relative"});
     $('#bottom').css({"top": "0px"});
     $('#directionality').css({"display": "inherit"});
+    $('#raised').css({"display": "inherit"});
+    $('#raised').css({"margin-top": "-30px"});
+    $('#raised').css({"position": "absolute"});
+    $('#raised').css({"text-align": "center"});
     $('#content').css({"height": "100%"});
-    $('#content').css({"margin-top": "-30px"});
-    $('#content').css({"width": "300px"});
     $('#info').css({"bottom": "0px"});
-    $('#info').css({"position": "relative"});
     $('#info').css({"color": "#000000"});
     $('#info').css({"padding-bottom": "0px"});
     $('#info').css({"margin-bottom": "0px"});
-
+    $('#info').css({"left": "0px"});
+    $('#info').css({"margin": "auto"});
+    $('#info').css({"position": "relative"});
+    $('#info').css({"top": "50%"});
+    $('#info').css({"transform": "translateY(-50%)"});
+    $('#info').css({"font-size": "26px"});
+    $('#info').css({"width": "400px"});
+    $('#format').css({"position": "fixed"});
 }
 
 /**
@@ -97,17 +105,23 @@ function phone() {
     $('body').css({"height": "100%"});
     $('html').css({"height": "100%"});
     $('#top').css({"height": "0%"});
+    $('#raised').css({"display": "none"});
     $('#bottom').css({"height": "100%"});
     $('#bottom').css({"position": "absolute"});
     $('#bottom').css({"top": "0px"});
     $('#directionality').css({"display": "none"});
-    $('#content').css({"height": "100%"});
-    $('#content').css({"margin-top": "0px"});
-    $('#content').css({"width": "300px"});
+    $('#content').css({"height": "unset"});
+    $('#content').css({"bottom": "0px"});
     $('#info').css({"bottom": "0px"});
-    $('#info').css({"position": "absolute"});
     $('#info').css({"color": "#d0cecf"});
     $('#info').css({"padding-bottom": "18px"});
     $('#info').css({"margin-bottom": "0px"});
+    $('#info').css({"left": "0px"});
+    $('#info').css({"margin": "auto"});
+    $('#info').css({"top": "inherit"});
+    $('#info').css({"position": "relative"});
+    $('#info').css({"transform": "inherit"});
+    $('#info').css({"font-size": "14px"});
+    $('#info').css({"width": "300px"});
     $('#format').css({"position": "absolute"});
 }
