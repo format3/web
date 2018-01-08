@@ -59,3 +59,12 @@ ul li:nth-child(4) a:hover .fa {
 ul li:nth-child(5) a:hover .fa {
     color: #1DB954;
 }
+
+#ul-social {
+    display: flex;
+    margin: 0 auto;
+    width: 300px;
+    padding: 0px;
+    position: relative;
+    right: inherit;
+}
