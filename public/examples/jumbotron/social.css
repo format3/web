@@ -61,11 +61,48 @@ ul li:nth-child(5) a:hover .fa {
     color: #1DB954;
 }
 
+ul li:nth-child(6) a:hover .fa {
+    color: #010101;
+}
+
 #ul-social {
     display: flex;
     margin: 0 auto;
-    width: 300px;
+    width: 360px;
     padding: 0px;
     position: relative;
+    right: inherit;
+}
+
+.navbar-social-bottom {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.navbar-social-left {
+    position: absolute;
+    width: 60px;
+    top: 80px;
+    left: 0px;
+}
+
+.navbar-social-right {
+    position: absolute;
+    height: 100%;
+    width: 60px;
+    top: 80px;
+    right: 0px;
+}
+
+.ul-social-side {
+    position: relative;
+    height: 180px;
+    width: 60px;
+    margin: 0;
+    display: block;
+    transform: translateY(-50%);
+    top: 50%;
+    padding: 0;
     right: inherit;
 }

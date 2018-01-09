@@ -100,7 +100,6 @@ function computer() {
     $('#info').css({"top": "50%"});
     $('#info').css({"transform": "translateY(-50%)"});
     $('#info').css({"font-size": "26px"});
-    $('#info').css({"width": "400px"});
     $('#format').css({"position": "fixed"});
 }
 
@@ -126,6 +125,5 @@ function phone() {
     $('#info').css({"position": "relative"});
     $('#info').css({"transform": "inherit"});
     $('#info').css({"font-size": "14px"});
-    $('#info').css({"width": "300px"});
     $('#format').css({"position": "absolute"});
 }
