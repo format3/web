@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "NEW ACADEMY";
+    src: url(NEWACADEMY.ttf);
+}
+
+body, html {
+    height: 100%;
+    margin: auto;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+#stars {
+    background-image: url("stars.png");
+}
+
+#noentry {
+    background-image: url("noentry.png");
+}
