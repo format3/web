@@ -28,7 +28,7 @@ $(document).ready(function() {
 
         //On Window Scroll
         var info = $('#info').offset().top;
-        var info2 = $('#top').offset().top;
+        var info2 = $('.top').offset().top;
 
         if ($(window).width() > 450) {
             if (window.pageYOffset > 0) {
@@ -62,13 +62,19 @@ $(document).ready(function() {
  * Resize top and bottom divs when window is resized
  */
 function resize() {
+
+    var height = $(window).height();
+
     //Only resize divs on computer
     if ($(window).width() > 450) {
-        var height = $(window).height();
         $('body').css({"height": (2*height)});
         $('html').css({"height": (2*height)});
-        $('#top').css({"height": (height)});
-        $('#bottom').css({"height": (height)});
+        $('.top').css({"height": (height)});
+        $('.bottom').css({"height": (height)});
+    }
+    else {
+        $('body').css({"height":"" + height + ""});
+        $('html').css({"height":"" + height + ""});
     }
 }
 
@@ -76,8 +82,8 @@ function resize() {
  * CSS updates for computer
  */
 function computer() {
-    $('#bottom').css({"position": "relative"});
-    $('#bottom').css({"top": "0px"});
+    $('.bottom').css({"position": "relative"});
+    $('.bottom').css({"top": "0px"});
     $('#directionality').css({"display": "inherit"});
     $('#raised').css({"display": "inherit"});
     $('#raised').css({"margin-top": "-30px"});
@@ -102,13 +108,11 @@ function computer() {
  * CSS updates for phone
  */
 function phone() {
-    $('body').css({"height": "100%"});
-    $('html').css({"height": "100%"});
-    $('#top').css({"height": "0%"});
+    $('.top').css({"height": "100%"});
     $('#raised').css({"display": "none"});
-    $('#bottom').css({"height": "100%"});
-    $('#bottom').css({"position": "absolute"});
-    $('#bottom').css({"top": "0px"});
+    $('.bottom').css({"height": "100%"});
+    $('.bottom').css({"position": "absolute"});
+    $('.bottom').css({"top": "0px"});
     $('#directionality').css({"display": "none"});
     $('#content').css({"height": "unset"});
     $('#content').css({"bottom": "0px"});

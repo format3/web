@@ -20,11 +20,31 @@ function renderHTML(path, response) {
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-    //Render Index Page
-    renderHTML('../public/examples/jumbotron/index.html', res);
+    var domain = req.headers.host;
+    var subDomain = domain.split('.');
 
-    //Used for ../views/index.jade
-  //res.render('index', { title: 'Express' });
+    //Check if the request had a subdomain
+    if(subDomain.length > 2) {
+        subDomain = subDomain[0].split("-").join(" ");
+
+        //Route subdomain to correct page
+        if (subDomain === "noentry") {
+            //Render No Entry Page
+            renderHTML('../public/examples/jumbotron/noentry.html', res);
+        }
+        else if (subDomain === "stars") {
+            //Render Stars Page
+            renderHTML('../public/examples/jumbotron/stars.html', res);
+        }
+        else {
+            //Render Index Page
+            renderHTML('../public/examples/jumbotron/index.html', res);
+        }
+    }
+    else {
+        //Render Index Page
+        renderHTML('../public/examples/jumbotron/index.html', res);
+    }
 });
 
 module.exports = router;

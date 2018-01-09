@@ -50,9 +50,24 @@ body, html {
     margin-bottom: 10px;
 }
 
-#top, #bottom {
+.top, .bottom {
     height: 50%;
     width: 100%;
+}
+
+#top-noentry, #top-stars {
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+#top-noentry {
+    background-image: url("noentry.png");
+}
+
+#top-stars {
+    background-image: url("stars.png");
 }
 
 #info {
