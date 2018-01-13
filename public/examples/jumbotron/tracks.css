@@ -11,17 +11,17 @@ body, html {
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-attachment: fixed !important;
-}
-
-#stars {
-    background-image: url("stars.png");
-}
-
-#noentry {
-    background-image: url("noentry.png");
+    background-image: url("format-logo.png");
 }
 
 #spotify {
+    margin: 0 auto;
+}
+
+#div-spotify {
     width: 100%;
-    height: 100%;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    text-align: center;
 }

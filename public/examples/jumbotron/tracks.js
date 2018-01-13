@@ -30,15 +30,31 @@ $(document).ready(function() {
             socialSide();
         }
     });
+
+
+    //When phone screen is flipped
+    $( window ).on( "orientationchange", function( event ) {
+        $( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
+    });
 });
 
 function socialBottom() {
+
+    if ($('#spotify-side')) {
+        $('#spotify-side').attr("id", "spotify");
+    }
+
     $('.navbar-social-left').hide();
     $('.navbar-social-right').hide();
     $('.navbar-social-bottom').show();
 }
 
 function socialSide() {
+
+    if ($('#spotify')) {
+        $('#spotify').attr("id", "spotify-side");
+    }
+
     $('.navbar-social-left').show();
     $('.navbar-social-right').show();
     $('.navbar-social-bottom').hide();
